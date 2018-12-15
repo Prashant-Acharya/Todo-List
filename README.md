@@ -1,2 +1,6 @@
 # Todo-List
-It contains a Todo list application made with HTML, CSS and JavaScript.
+The app uses
+- HTML
+- CSS
+- JavaScript and
+- LocalStorage API
