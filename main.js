@@ -2,7 +2,7 @@ let $ = query => document.querySelectorAll(query)
 let _ = query => document.querySelector(query)
 let todos = localStorage.getItem('todos') ?  JSON.parse(localStorage.getItem('todos')) : []
 
-function resetBtn(){
+let resetBtn = () => {
 	_('#reset').style.display = todos.length === 0 ? 'none' : 'inline'
 }
 
@@ -49,3 +49,5 @@ $('.delete').forEach(item => item.addEventListener('click', () => {
 }))
 
 let store = () => localStorage.setItem('todos', JSON.stringify(todos))
+
+// sharma.biplav11
