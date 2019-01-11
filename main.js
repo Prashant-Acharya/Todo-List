@@ -19,6 +19,7 @@ let renderList = () => {
 		`
 	}
 	_('#todos').innerHTML = list
+	deleteList();
 }
 
 // Call this function at the starting of the app
@@ -42,11 +43,15 @@ _('#reset').addEventListener('click', () => {
 	renderList()
 })
 
-$('.delete').forEach(item => item.addEventListener('click', () => { 
-	todos.splice([...$('.delete')].indexOf(item), 1)
-	store()
-	renderList()
-}))
+function deleteList(){
+	$('.delete').forEach(item => item.addEventListener('click', () => { 
+		todos.splice([...$('.delete')].indexOf(item), 1)
+		store()
+		renderList()
+	}))
+}
+
+
 
 let store = () => localStorage.setItem('todos', JSON.stringify(todos))
 
